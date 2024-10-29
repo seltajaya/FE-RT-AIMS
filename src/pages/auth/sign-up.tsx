@@ -1,62 +1,62 @@
-import { Card } from '@/components/ui/card'
-import { SignUpForm } from './components/sign-up-form'
 import { Link } from 'react-router-dom'
+import { SignUpForm } from './components/sign-up-form'
+import { banner } from '@/components/assets/images'
+import { Button } from '@/components/custom/button'
 
 export default function SignUp() {
   return (
     <>
-      <div className='container grid h-svh flex-col items-center justify-center bg-primary-foreground lg:max-w-none lg:px-0'>
-        <div className='mx-auto flex w-full flex-col justify-center space-y-2 sm:w-[480px] lg:p-8'>
-          <div className='mb-4 flex items-center justify-center'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              strokeWidth='2'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              className='mr-2 h-6 w-6'
-            >
-              <path d='M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3' />
-            </svg>
-            <h1 className='text-xl font-medium'>Shadcn Admin</h1>
-          </div>
-          <Card className='p-6'>
-            <div className='mb-2 flex flex-col space-y-2 text-left'>
-              <h1 className='text-lg font-semibold tracking-tight'>
+      <div className='container grid max-h-screen w-full flex-col items-center justify-center lg:grid-cols-2'>
+        <div className='flex h-full flex-col justify-center lg:p-8'>
+          <div className='mx-auto flex w-full flex-col justify-center space-y-4 sm:w-[360px]'>
+            <div className='flex flex-col space-y-2 text-center'>
+              <h1 className='text-2xl font-semibold tracking-tight text-black'>
                 Create an account
               </h1>
               <p className='text-sm text-muted-foreground'>
-                Enter your email and password to create an account. <br />
-                Already have an account?{' '}
-                <Link
-                  to='/sign-in'
-                  className='underline underline-offset-4 hover:text-primary'
-                >
-                  Sign In
-                </Link>
+                Create account now and get 30 minutes credit for free
               </p>
             </div>
             <SignUpForm />
-            <p className='mt-4 px-8 text-center text-sm text-muted-foreground'>
-              By creating an account, you agree to our{' '}
-              <a
-                href='/terms'
-                className='underline underline-offset-4 hover:text-primary'
+            <div className='flex justify-center'>
+              <p className='text-muted-foreground'>Already have an account?</p>
+              <Link
+                to={'/sign-in'}
+                className='text-bold ml-2 font-medium text-black underline hover:opacity-75'
               >
-                Terms of Service
-              </a>{' '}
-              and{' '}
-              <a
-                href='/privacy'
-                className='underline underline-offset-4 hover:text-primary'
-              >
-                Privacy Policy
-              </a>
-              .
+                Login
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className='hidden lg:block h-auto w-fit flex-col items-center justify-center relative'>
+          <Button className='absolute mt-2 h-24 w-80 rounded-full border-4 border-[#8A3DFF] z-10'>
+            Try now for free!
+          </Button>
+          
+          <div className='absolute top-28 right-4 z-10 text-[#FFF9D4] font-bold text-4xl' 
+          style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8' }} >
+            Summarize in second
+          </div>
+
+          <div className='absolute top-48 left-4 z-10 p-4 rounded-lg bg-white bg-opacity-10 backdrop-blur-lg shadow-lg w-64'> 
+            <p className='text-[#FFF9D4] text-lg leading-tight' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8' }} >
+              Cut through the clutter and get instant meeting summaries and stay ahead effortlessly.
             </p>
-          </Card>
+          </div>
+
+          <div className='absolute bottom-36 right-4 z-10 p-4 rounded-lg bg-white bg-opacity-10 backdrop-blur-lg shadow-lg w-64'>
+            <p className='text-[#FFF9D4] text-lg leading-tight' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8' }} >
+              Instant insights from every meeting, so you can focus on what matters.
+            </p>
+          </div>
+
+          <img
+            src={banner}
+            alt=''
+            className='max-h-screen rounded-3xl object-cover'
+          />
         </div>
       </div>
     </>
