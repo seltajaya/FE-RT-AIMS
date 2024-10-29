@@ -106,7 +106,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                 </FormItem>
               )}
             />
-            <Button className='bg-btnPrimary' loading={isLoading}>
+            <Button className='bg-colorPrimary' loading={isLoading}>
               Sign In
             </Button>
 
@@ -123,7 +123,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 
             <div className='flex items-center gap-2'>
               <Button
-                className='w-full border hover:bg-btnPrimary '
+                className='w-full border hover:bg-colorPrimary '
                 type='button'
                 loading={isLoading}
                 leftSection={<FcGoogle className='h-4 w-4' />}

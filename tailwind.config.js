@@ -39,8 +39,8 @@ module.exports = {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        btnPrimary: {
-          DEFAULT:"hsl(var(--btn-primary))"
+        colorPrimary: {
+          DEFAULT:"hsl(var(--color-primary))"
         },
         inputField: {
           DEFAULT:"hsl(var(--input-field))"

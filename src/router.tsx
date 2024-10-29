@@ -5,6 +5,12 @@ import MaintenanceError from './pages/errors/maintenance-error'
 import UnauthorisedError from './pages/errors/unauthorised-error.tsx'
 
 const router = createBrowserRouter([
+  {
+    path: '/',
+    lazy: async () => ({
+      Component: (await import('./pages/landing/landing-page')).default,
+    }),
+  },
   // Auth routes
   {
     path: '/sign-in',
@@ -24,9 +30,10 @@ const router = createBrowserRouter([
       Component: (await import('./pages/auth/forgot-password')).default,
     }),
   },
+
   // Main routes
   {
-    path: '/',
+    path: '/dashboard',
     lazy: async () => {
       const AppShell = await import('./components/app-shell')
       return { Component: AppShell.default }

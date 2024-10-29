@@ -7,7 +7,7 @@ import { Button } from '@/components/custom/button'
 export default function SignIn() {
   return (
     <>
-      <div className='container grid max-h-screen w-full flex-col items-center justify-center lg:grid-cols-2'>
+      <div className='container grid w-full h-full flex-col items-center justify-center lg:grid-cols-2'>
         <div className='hidden lg:block h-auto w-fit flex-col items-center justify-center'>
           <Button className='absolute mt-2 h-24 w-80 rounded-full border-4 border-[#8A3DFF]'>
             Try now for free !
