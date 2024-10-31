@@ -17,8 +17,6 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/custom/button'
 import { PasswordInput } from '@/components/custom/password-input'
 import { cn } from '@/lib/utils'
-import { Checkbox } from "@/components/ui/checkbox"
-import { Label } from "@/components/ui/label"
 
 interface SignUpFormProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -64,67 +62,68 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <div className='grid gap-2'>
+            {/* Input Name */}
             <FormField
               control={form.control}
               name='name'
               render={({ field }) => (
-                <FormItem className='space-y-3 text-black'>
+                <FormItem className='text-textPrimary space-y-3'>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input placeholder='Enter your name' {...field} className='bg-inputField text-black' />
+                    <Input
+                      placeholder='Enter your name'
+                      {...field}
+                      className='text-textPrimary bg-inputField'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+
+            {/* Input Email */}
             <FormField
               control={form.control}
               name='email'
               render={({ field }) => (
-                <FormItem className='space-y-3 text-black'>
+                <FormItem className='text-textPrimary space-y-2'>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder='Enter your email address' {...field} className='bg-inputField text-black' />
+                    <Input
+                      placeholder='Enter your email address'
+                      {...field}
+                      className='text-textPrimary bg-inputField'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+
+            {/* Input Password */}
             <FormField
               control={form.control}
               name='password'
               render={({ field }) => (
-                <FormItem className='space-y-4'>
-                  <div className='flex items-center justify-between text-black'>
-                    <FormLabel>Password</FormLabel>
-                  </div>
+                <FormItem className='text-textPrimary space-y-2'>
+                  <FormLabel>Password</FormLabel>
                   <FormControl>
                     <PasswordInput
                       placeholder='Enter your password'
                       {...field}
-                      className='bg-inputField text-black'
+                      className='text-textPrimary bg-inputField'
                     />
                   </FormControl>
-                  <div className='flex justify-between'>
-                    <div className='flex text-sm font-medium text-muted-foreground hover:opacity-75'>
-                      <Checkbox className='bg-inputField' />
-                      <Label className='ml-2'>Remember Me</Label>
-                    </div>
-                    <Link
-                      to='/forgot-password'
-                      className='text-sm font-medium text-black underline text-bold hover:opacity-75'
-                    >
-                      Forgot password?
-                    </Link>
-                  </div>
                   <FormMessage />
                 </FormItem>
               )}
             />
-             <Button className='bg-btnPrimary' loading={isLoading}>
-              Create Account
-            </Button>
-            <Button className='bg-btnPrimary' loading={isLoading}>
+
+            {/* Button SignUp */}
+            <Button
+              className='hover:text-textPrimary mt-5 bg-colorPrimary text-primary'
+              loading={isLoading}
+            >
               Sign Up
             </Button>
 
@@ -133,29 +132,43 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
                 <span className='w-full border-t' />
               </div>
               <div className='relative flex justify-center text-xs'>
-                <span className='bg-white px-2 text-muted-foreground'>
+                <span className='bg-foreground px-2 text-muted-foreground'>
                   Or login with
                 </span>
               </div>
             </div>
 
             <div className='flex items-center gap-2'>
+              {/* Google */}
               <Button
-                className='w-full border hover:bg-btnPrimary '
+                className='w-full border hover:border-transparent hover:bg-colorPrimary '
                 type='button'
                 loading={isLoading}
                 leftSection={<FcGoogle className='h-4 w-4' />}
               >
                 Google
               </Button>
+
+              {/* Apple */}
               <Button
-                className='w-full border hover:bg-btnPrimary'
+                className='w-full border hover:border-transparent hover:bg-colorPrimary'
                 type='button'
                 loading={isLoading}
                 leftSection={<FaApple className='h-4 w-4' />}
               >
                 Apple
               </Button>
+            </div>
+
+            {/* to Login */}
+            <div className='flex justify-center space-x-2'>
+              <p className='text-muted-foreground'>Already have an account?</p>
+              <Link
+                to={'/sign-in'}
+                className='text-textPrimary font-medium underline'
+              >
+                Login
+              </Link>
             </div>
           </div>
         </form>

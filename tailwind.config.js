@@ -42,6 +42,9 @@ module.exports = {
         colorPrimary: {
           DEFAULT:"hsl(var(--color-primary))"
         },
+        textPrimary: {
+          DEFAULT:"hsl(var(--text-primary))"
+        },
         inputField: {
           DEFAULT:"hsl(var(--input-field))"
         },

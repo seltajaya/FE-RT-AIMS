@@ -17,8 +17,8 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/custom/button'
 import { PasswordInput } from '@/components/custom/password-input'
 import { cn } from '@/lib/utils'
-import { Checkbox } from "@/components/ui/checkbox"
-import { Label } from "@/components/ui/label"
+import { Checkbox } from '@/components/ui/checkbox'
+import { Label } from '@/components/ui/label'
 
 interface UserAuthFormProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -61,43 +61,48 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     <div className={cn('grid gap-6', className)} {...props}>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <div className='grid gap-2'>
+          <div className='grid gap-2 space-y-3'>
+            {/* Input Email*/}
             <FormField
               control={form.control}
               name='email'
               render={({ field }) => (
-                <FormItem className='space-y-3 text-black'>
+                <FormItem className='text-textPrimary space-y-3'>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder='Enter your email address' {...field} className='bg-inputField text-black' />
+                    <Input
+                      placeholder='Enter your email address'
+                      {...field}
+                      className='text-textPrimary bg-inputField'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+
+            {/* Input Password */}
             <FormField
               control={form.control}
               name='password'
               render={({ field }) => (
-                <FormItem className='space-y-4'>
-                  <div className='flex items-center justify-between text-black'>
-                    <FormLabel>Password</FormLabel>
-                  </div>
+                <FormItem className='text-textPrimary space-y-3'>
+                  <FormLabel>Password</FormLabel>
                   <FormControl>
                     <PasswordInput
                       placeholder='Enter your password'
                       {...field}
-                      className='bg-inputField text-black'
+                      className='text-textPrimary bg-inputField'
                     />
                   </FormControl>
                   <div className='flex justify-between'>
-                    <div className='flex text-sm font-medium text-muted-foreground hover:opacity-75'>
+                    <div className='flex space-x-2 text-muted-foreground'>
                       <Checkbox className='bg-inputField' />
-                      <Label className='ml-2'>Remember Me</Label>
+                      <Label>Remember Me</Label>
                     </div>
                     <Link
                       to='/forgot-password'
-                      className='text-sm font-medium text-black underline text-bold hover:opacity-75'
+                      className='text-textPrimary text-sm font-medium underline'
                     >
                       Forgot password?
                     </Link>
@@ -106,38 +111,57 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                 </FormItem>
               )}
             />
-            <Button className='bg-colorPrimary' loading={isLoading}>
+
+            {/* Button SignIn */}
+            <Button
+              className='hover:text-textPrimary bg-colorPrimary text-primary'
+              loading={isLoading}
+            >
               Sign In
             </Button>
 
-            <div className='relative my-2'>
+            <div className='relative'>
               <div className='absolute inset-0 flex items-center'>
                 <span className='w-full border-t' />
               </div>
               <div className='relative flex justify-center text-xs'>
-                <span className='bg-white px-2 text-muted-foreground'>
+                <span className='bg-foreground px-2 text-muted-foreground'>
                   Or login with
                 </span>
               </div>
             </div>
 
             <div className='flex items-center gap-2'>
+              {/* Google */}
               <Button
-                className='w-full border hover:bg-colorPrimary '
+                className='w-full border hover:border-transparent hover:bg-colorPrimary'
                 type='button'
                 loading={isLoading}
                 leftSection={<FcGoogle className='h-4 w-4' />}
               >
                 Google
               </Button>
+
+              {/* Apple */}
               <Button
-                className='w-full border hover:bg-btnPrimary'
+                className='w-full border hover:border-transparent hover:bg-colorPrimary'
                 type='button'
                 loading={isLoading}
                 leftSection={<FaApple className='h-4 w-4' />}
               >
                 Apple
               </Button>
+            </div>
+
+            {/* to Register */}
+            <div className='flex justify-center space-x-2'>
+              <p className='text-muted-foreground'>Don't have an account?</p>
+              <Link
+                to={'/sign-up'}
+                className='text-textPrimary font-medium underline'
+              >
+                Register
+              </Link>
             </div>
           </div>
         </form>

@@ -32,9 +32,15 @@ export const sidelinks: SideLink[] = [
     icon: <IconLayoutDashboard size={18} />,
   },
   {
-    title: 'Tasks',
+    title: 'History',
     label: '3',
-    href: '/tasks',
+    href: '/history',
+    icon: <IconChecklist size={18} />,
+  },
+  {
+    title: 'Summarize AI',
+    label: '3',
+    href: '/503',
     icon: <IconChecklist size={18} />,
   },
   {
