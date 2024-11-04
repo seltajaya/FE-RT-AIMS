@@ -121,10 +121,10 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
                 </FormItem>
               )}
             />
-             <Button className='bg-btnPrimary' loading={isLoading}>
+             <Button className='bg-colorPrimary' loading={isLoading}>
               Create Account
             </Button>
-            <Button className='bg-btnPrimary' loading={isLoading}>
+            <Button className='bg-colorPrimary' loading={isLoading}>
               Sign Up
             </Button>
 
@@ -141,7 +141,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
 
             <div className='flex items-center gap-2'>
               <Button
-                className='w-full border hover:bg-btnPrimary '
+                className='w-full border hover:bg-colorPrimary '
                 type='button'
                 loading={isLoading}
                 leftSection={<FcGoogle className='h-4 w-4' />}
@@ -149,7 +149,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
                 Google
               </Button>
               <Button
-                className='w-full border hover:bg-btnPrimary'
+                className='w-full border hover:bg-colorPrimary'
                 type='button'
                 loading={isLoading}
                 leftSection={<FaApple className='h-4 w-4' />}

@@ -34,20 +34,22 @@ export default function SignUp() {
           <Button className='absolute mt-2 h-24 w-80 rounded-full border-4 border-[#8A3DFF] z-10'>
             Try now for free!
           </Button>
-          
-          <div className='absolute top-28 right-4 z-10 text-[#FFF9D4] font-bold text-4xl' 
-          style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8' }} >
-            Summarize in second
+        
+          <div className='absolute top-32 right-16 z-10 text-[#FFF9D4] font-bold text-4xl'
+              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
+            Summarize in seconds
           </div>
 
-          <div className='absolute top-48 left-4 z-10 p-4 rounded-lg bg-white bg-opacity-10 backdrop-blur-lg shadow-lg w-64'> 
-            <p className='text-[#FFF9D4] text-lg leading-tight' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8' }} >
-              Cut through the clutter and get instant meeting summaries and stay ahead effortlessly.
+          <div className='absolute top-56 left-16 z-10 p-4 rounded-lg bg-white bg-opacity-10 backdrop-blur-lg shadow-lg w-64'>
+            <p className='text-[#FFF9D4] text-lg leading-tight' 
+              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
+              Cut through the clutter and get instant meeting summaries to stay ahead effortlessly.
             </p>
           </div>
 
-          <div className='absolute bottom-36 right-4 z-10 p-4 rounded-lg bg-white bg-opacity-10 backdrop-blur-lg shadow-lg w-64'>
-            <p className='text-[#FFF9D4] text-lg leading-tight' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8' }} >
+          <div className='absolute bottom-32 right-16 z-10 p-4 rounded-lg bg-white bg-opacity-10 backdrop-blur-lg shadow-lg w-64'>
+            <p className='text-[#FFF9D4] text-lg leading-tight' 
+              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
               Instant insights from every meeting, so you can focus on what matters.
             </p>
           </div>
