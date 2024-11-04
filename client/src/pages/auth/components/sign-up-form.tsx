@@ -142,8 +142,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
             <div className='flex items-center gap-2'>
               {/* Google */}
               <Button
-                className='w-full border hover:bg-colorPrimary '
-                type='button'
+                className='w-full border hover:border-transparent hover:bg-colorPrimary '
                 loading={isLoading}
                 leftSection={<FcGoogle className='h-4 w-4' />}
               >
