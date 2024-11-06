@@ -7,14 +7,14 @@ export function Footer() {
     <>
       <footer className='bg-black text-white py-8 mt-20'>
         <div className='container mx-auto grid grid-cols-1 gap-8 md:grid-cols-5'>
-        <div className='flex flex-col sm:flex-row md:flex-col items-center md:items-start text-white'>
-  <img className='h-16 w-auto sm:mr-4' src={imagetextIL} alt='Your Company' />
-  <div className='text-center sm:text-left'>
-    <p className='text-white'>Jl. Hang Lekui KM 2 Sambau,</p>
-    <p className='text-white'>Kota Batam, Kepulauan Riau</p>
-    <p className='text-white'>29466</p>
-  </div>
-</div>
+          <div className='flex flex-col sm:flex-row md:flex-col items-center md:items-start text-white'>
+            <img className='h-16 w-auto sm:mr-4' src={imagetextIL} alt='Your Company' />
+              <div className='text-center sm:text-left'>
+                <p className='text-white'>Jl. Hang Lekui KM 2 Sambau,</p>
+                <p className='text-white'>Kota Batam, Kepulauan Riau</p>
+                <p className='text-white'>29466</p>
+              </div>
+          </div>
 
 
           {/* Membuat Program, Community, dan About selalu sejajar */}
